@@ -20,8 +20,7 @@ namespace Pine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Task t = new Task("test ", new Vector2(0, 60), false);
-            foreach (Control c in t.FormsElements)
+            foreach (Control c in TaskManager.GenerateNewTask("Task").FormsElements)
             {
                 this.Controls.Add(c);
             }
